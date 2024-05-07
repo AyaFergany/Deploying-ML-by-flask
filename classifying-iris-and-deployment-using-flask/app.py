@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open("model.pkl", "rb"))
+model = pickle.load(open("classifying-iris-and-deployment-using-flask/model.pkl", "rb"))
 
 @app.route("/")
 def home():

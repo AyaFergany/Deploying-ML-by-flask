@@ -7,7 +7,7 @@ import pickle
 
 def load_data(file_path):
     try:
-        df = pd.read_csv("iris.csv")
+        df = pd.read_csv(file_path)
         return df
     except FileNotFoundError:
         print(f"File not found: {file_path}")
@@ -40,7 +40,7 @@ def main():
         return
     features, target = preprocess_data(df)
     model = train_model(features, target)
-    save_model(model, "model.pkl")
+    save_model(model, "classifying-iris-and-deployment-using-flask/model.pkl")
 
 if __name__ == "__main__":
     main()
